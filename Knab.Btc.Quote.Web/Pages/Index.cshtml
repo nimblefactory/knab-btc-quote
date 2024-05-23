@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="py-5 text-center">
+    <h2>Crypto Quote</h2>
+    <p class="lead">Select a crypto currency to get a quote.</p>
+</div>
+<div class="row">
+    <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Quote</h4>
+        <form class="needs-validation" method="get" action="/quote">
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <label for="cryptoId">Crypto currency</label>
+                    <select name="cryptoId" asp-items="Model.CryptoCurrencies"></select>
+                </div>
+            </div>
+            <hr class="mb-4" />
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Get quote</button>
+        </form>
+    </div>
+</div>
