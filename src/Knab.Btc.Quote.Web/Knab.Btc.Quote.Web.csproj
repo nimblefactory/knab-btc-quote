@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Knab.Btc.Quote.Adapters\Knab.Btc.Quote.Adapters.csproj" />
-    <ProjectReference Include="..\src\Knab.Btc.Quote.Core\Knab.Btc.Quote.Core.csproj" />
+    <ProjectReference Include="..\Knab.Btc.Quote.Adapters\Knab.Btc.Quote.Adapters.csproj" />
+    <ProjectReference Include="..\Knab.Btc.Quote.Core\Knab.Btc.Quote.Core.csproj" />
   </ItemGroup>
 
 </Project>
