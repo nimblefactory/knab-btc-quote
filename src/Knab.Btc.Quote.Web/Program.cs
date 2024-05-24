@@ -1,4 +1,5 @@
 using Knab.Btc.Quote.Adapters.CoinMarketCap;
+using Knab.Btc.Quote.Adapters.CoinMarketCap.Handlers;
 using Knab.Btc.Quote.Core;
 using Knab.Btc.Quote.Core.Ports;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;

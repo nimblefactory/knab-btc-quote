@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Btc.Quote.Web", ".\src\Knab.Btc.Quote.Web\Knab.Btc.Quote.Web.csproj", "{0C4D66ED-9378-41F6-A818-F56706C55DB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knab.Btc.Quote.Web", "src\Knab.Btc.Quote.Web\Knab.Btc.Quote.Web.csproj", "{0C4D66ED-9378-41F6-A818-F56706C55DB6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Host", "1. Host", "{5CD73B61-5394-47E3-BA14-198D6654B68A}"
 EndProject
@@ -11,11 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domain", "2. Domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Test", "5. Test", "{5510773D-1AEF-4635-A3E0-91CA42497CDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Btc.Quote.Core", ".\src\Knab.Btc.Quote.Core\Knab.Btc.Quote.Core.csproj", "{A4E485B8-E2B5-4A2A-AD9C-D607CDC6A700}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knab.Btc.Quote.Core", "src\Knab.Btc.Quote.Core\Knab.Btc.Quote.Core.csproj", "{A4E485B8-E2B5-4A2A-AD9C-D607CDC6A700}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{D38060E4-272D-430D-91D9-F37582552448}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Btc.Quote.Adapters", ".\src\Knab.Btc.Quote.Adapters\Knab.Btc.Quote.Adapters.csproj", "{CCB829DC-EBE6-4640-979C-5BA288BFC068}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knab.Btc.Quote.Adapters", "src\Knab.Btc.Quote.Adapters\Knab.Btc.Quote.Adapters.csproj", "{CCB829DC-EBE6-4640-979C-5BA288BFC068}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knab.Btc.Quote.Adapters.Tests", "tst\Knab.Btc.Quote.Adapters.Tests\Knab.Btc.Quote.Adapters.Tests.csproj", "{DCE4304A-A67E-46CE-A148-0A306A02C557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Btc.Quote.Core.Tests", "tst\Knab.Btc.Quote.Core.Tests\Knab.Btc.Quote.Core.Tests.csproj", "{F47117A9-F74E-4061-B8CE-554AA6FB59AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{CCB829DC-EBE6-4640-979C-5BA288BFC068}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCB829DC-EBE6-4640-979C-5BA288BFC068}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCB829DC-EBE6-4640-979C-5BA288BFC068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE4304A-A67E-46CE-A148-0A306A02C557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE4304A-A67E-46CE-A148-0A306A02C557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE4304A-A67E-46CE-A148-0A306A02C557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE4304A-A67E-46CE-A148-0A306A02C557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47117A9-F74E-4061-B8CE-554AA6FB59AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47117A9-F74E-4061-B8CE-554AA6FB59AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47117A9-F74E-4061-B8CE-554AA6FB59AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47117A9-F74E-4061-B8CE-554AA6FB59AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +55,8 @@ Global
 		{0C4D66ED-9378-41F6-A818-F56706C55DB6} = {5CD73B61-5394-47E3-BA14-198D6654B68A}
 		{A4E485B8-E2B5-4A2A-AD9C-D607CDC6A700} = {461287DE-086E-4439-909F-95F3D638F12F}
 		{CCB829DC-EBE6-4640-979C-5BA288BFC068} = {D38060E4-272D-430D-91D9-F37582552448}
+		{DCE4304A-A67E-46CE-A148-0A306A02C557} = {5510773D-1AEF-4635-A3E0-91CA42497CDC}
+		{F47117A9-F74E-4061-B8CE-554AA6FB59AB} = {5510773D-1AEF-4635-A3E0-91CA42497CDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E89458C-8040-4393-9E17-7E42D27F5B13}

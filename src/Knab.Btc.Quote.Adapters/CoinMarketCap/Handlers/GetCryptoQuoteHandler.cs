@@ -5,7 +5,7 @@ using Knab.Btc.Quote.Core.Messages;
 using Knab.Btc.Quote.Core.Model;
 using MediatR;
 
-namespace Knab.Btc.Quote.Adapters.CoinMarketCap;
+namespace Knab.Btc.Quote.Adapters.CoinMarketCap.Handlers;
 
 public class GetCryptoQuoteHandler : IRequestHandler<GetCryptoQuoteRequest, GetCryptoQuoteResponse>
 {
@@ -25,16 +25,18 @@ public class GetCryptoQuoteHandler : IRequestHandler<GetCryptoQuoteRequest, GetC
                     .BaseUrl
                     .AppendPathSegment("/v2/cryptocurrency/quotes/latest")
                     .WithHeader("X-CMC_PRO_API_KEY", _settings.ApiKey)
-                    .WithHeader("Accepts", "application/json")
                     .AppendQueryParam("id", request.CryptoId)
                     .AppendQueryParam("convert", x)
                     .GetJsonAsync<QuoteResult>(cancellationToken: cancellationToken);
             })
             .ToList();
 
-        var results = await Task.WhenAll(taskList);
+        // Produce all non-null results.
+        var results = (await Task.WhenAll(taskList))
+            .Where(x => x != null)
+            .ToList();
 
-        if (results.Length == 0)
+        if (results == null || results.Count == 0)
         {
             return new GetCryptoQuoteResponse();
         }
