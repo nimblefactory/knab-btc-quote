@@ -2,6 +2,7 @@
 
 1. *How long did you spend on the coding assignment? What would you add to your solution if you had
 more time?*
+- I think around 12 hours.
 - Caching, to be able to manage performance and API call cost.
 Error handling, to cover more cases that would lead to an error.
 - Logging, to be able to analyze what is happening in a production environment.
