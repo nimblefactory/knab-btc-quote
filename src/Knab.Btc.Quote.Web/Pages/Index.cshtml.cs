@@ -1,5 +1,4 @@
 using Knab.Btc.Quote.Core.Ports;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -7,20 +6,22 @@ namespace Knab.Btc.Quote.Web.Pages;
 
 public class IndexModel : PageModel
 {
-    private readonly ICryptoQuoteService _cryptoQuoteService;
+    private readonly ICryptoCurrencyService _cryptoCurrencyService;
 
     public List<SelectListItem> CryptoCurrencies { get; set; } = [];
 
-    public IndexModel(ICryptoQuoteService cryptoQuoteService)
+    public IndexModel(ICryptoCurrencyService cryptoCurrencyService)
     {
-        _cryptoQuoteService = cryptoQuoteService;
+        _cryptoCurrencyService = cryptoCurrencyService;
     }
 
     public async Task OnGet(CancellationToken cancellationToken)
     {
-        CryptoCurrencies = (await _cryptoQuoteService.GetCurrencies(cancellationToken))
+        var currencies = (await _cryptoCurrencyService.GetCurrencies(cancellationToken))
             .CryptoCurrencies
             .Select(x => new SelectListItem(x.Value, x.Key))
             .ToList();
+
+        CryptoCurrencies = currencies;
     }
 }

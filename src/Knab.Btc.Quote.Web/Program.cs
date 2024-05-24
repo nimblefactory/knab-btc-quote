@@ -29,6 +29,7 @@ public class Program
         builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetCryptoQuoteHandler>());
 
         // Register Core services.
+        builder.Services.AddScoped<ICryptoCurrencyService, CryptoCurrencyService>();
         builder.Services.AddScoped<ICryptoQuoteService, CryptoQuoteService>();
         builder.Services.AddTransient(x => new CryptoCurrencyApiSettings
         {

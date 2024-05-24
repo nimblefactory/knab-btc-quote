@@ -8,7 +8,7 @@ public class QuoteModel : PageModel
 {
     private readonly ICryptoQuoteService _cryptoQuoteService;
 
-    public string CryptoName { get; set; } = "Unknown currency";
+    public string CryptoName { get; set; } = "Unknown";
 
     public List<CryptoQuoteModel> Quotes { get; set; } = [];
 
