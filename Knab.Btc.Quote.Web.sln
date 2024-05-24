@@ -21,6 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knab.Btc.Quote.Adapters.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Btc.Quote.Core.Tests", "tst\Knab.Btc.Quote.Core.Tests\Knab.Btc.Quote.Core.Tests.csproj", "{F47117A9-F74E-4061-B8CE-554AA6FB59AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Solution Items", "0. Solution Items", "{90B35655-5850-445D-99FA-376544D8B3A5}"
+	ProjectSection(SolutionItems) = preProject
+		Answers to technical questions.md = Answers to technical questions.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
