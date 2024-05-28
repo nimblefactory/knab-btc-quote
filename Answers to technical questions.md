@@ -4,7 +4,7 @@
 more time?*
 - I think around 12 hours.
 - Caching, to be able to manage performance and API call cost.
-Error handling, to cover more cases that would lead to an error.
+- Error handling, to cover more cases that would lead to an error.
 - Logging, to be able to analyze what is happening in a production environment.
 - Integration tests, to more confidently deploy to production.
 - More unit-tests, to have even beter coverage.
